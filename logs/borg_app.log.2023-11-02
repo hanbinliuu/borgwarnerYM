@@ -1,0 +1,5 @@
+[2023-11-02 13:38:09.326 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-02 13:38:20.156 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-02 13:38:20.157 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1698903500.1570885
+[2023-11-02 13:38:20.253 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.0966181755065918s
+[2023-11-02 13:38:20.253 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0

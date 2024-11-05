@@ -1,0 +1,20 @@
+[2023-11-02 08:47:23.072 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-02 08:52:51.273 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-02 08:52:51.273 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: [Errno 2] No such file or directory: 'E:/pycharmProject/borgwarner/results/svm_model_test.pkl'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 36, in __call__
+    with open(self.model_path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/pycharmProject/borgwarner/results/svm_model_test.pkl'
+[2023-11-02 08:53:12.921 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-02 08:53:14.688 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-02 08:53:14.850 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.1619565486907959s
+[2023-11-02 08:53:14.850 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-02 08:53:19.622 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-02 08:53:19.728 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.10427641868591309s
+[2023-11-02 08:53:19.728 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-02 09:00:18.402 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-02 09:00:18.597 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-02 09:00:18.703 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.105712890625s
+[2023-11-02 09:00:18.704 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0

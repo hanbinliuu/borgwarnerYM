@@ -1,0 +1,425 @@
+[2023-11-17 10:18:02.882 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:19:19.640 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:19:19.640 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700187559.64005
+[2023-11-17 10:19:19.646 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:19:19.649 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:19:19.649 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700187559.6490498
+[2023-11-17 10:19:19.649 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:19:37.900 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:36:18.176 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:36:18.176 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700188578.1768978
+[2023-11-17 10:36:18.177 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:36:18.179 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:36:18.179 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700188578.1798923
+[2023-11-17 10:36:18.179 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:44:39.521 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 10:44:58.846 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 10:45:41.487 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:47:00.505 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:47:00.506 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189220.5068436
+[2023-11-17 10:47:00.506 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:47:00.508 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:47:00.508 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189220.5088446
+[2023-11-17 10:47:00.509 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:47:27.889 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:48:46.961 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 10:50:18.309 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 10:51:54.590 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:52:13.243 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:52:13.243 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189533.2430563
+[2023-11-17 10:52:13.243 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:52:13.245 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:52:13.245 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189533.2450569
+[2023-11-17 10:52:13.245 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:52:17.354 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:52:17.354 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189537.3549812
+[2023-11-17 10:52:17.354 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:52:17.356 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:52:17.356 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189537.3569794
+[2023-11-17 10:52:17.356 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:1113: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:53:19.532 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address  172.24.96.1:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 10:54:14.785 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:54:27.038 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:54:27.038 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189667.0381627
+[2023-11-17 10:54:27.039 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:54:27.041 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:54:27.041 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189667.0411692
+[2023-11-17 10:54:27.041 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:59:12.736 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 10:59:15.734 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:59:15.734 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189955.7344952
+[2023-11-17 10:59:15.735 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 10:59:15.736 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 10:59:15.736 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700189955.7364962
+[2023-11-17 10:59:15.736 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-vi271kac\opencv\modules\imgcodecs\src\loadsave.cpp:896: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 11:01:35.787 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 11:01:51.780 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:01:51.780 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190111.780744
+[2023-11-17 11:01:51.781 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:976: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:976: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 11:01:51.783 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:01:51.783 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190111.7837448
+[2023-11-17 11:01:51.783 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:976: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+cv2.error: OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\imgcodecs\src\loadsave.cpp:976: error: (-215:Assertion failed) !image.empty() in function 'cv::imencode'
+
+[2023-11-17 11:02:13.900 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 11:02:15.751 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:02:15.751 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190135.7519941
+[2023-11-17 11:02:47.413 ERR][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) fail: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 63, in detect
+    res = self.detect_ctrler(request.image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 44, in __call__
+    image_bytes = read_bytes_img(image_url)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+  File "D:\pycharmProject\borgwarner\src\core\detect_controller.py", line 70, in read_bytes_img
+    success, img_encoded = cv2.imencode('.jpg', img)
+  File "E:\software\anaconda\envs\baseInterpreter\lib\bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "E:\software\anaconda\envs\baseInterpreter\lib\bdb.py", line 112, in dispatch_line
+    self.user_line(frame)
+  File "E:\software\anaconda\envs\baseInterpreter\lib\pdb.py", line 262, in user_line
+    self.interaction(frame, None)
+  File "E:\software\anaconda\envs\baseInterpreter\lib\pdb.py", line 357, in interaction
+    self._cmdloop()
+  File "E:\software\anaconda\envs\baseInterpreter\lib\pdb.py", line 322, in _cmdloop
+    self.cmdloop()
+  File "E:\software\anaconda\envs\baseInterpreter\lib\cmd.py", line 126, in cmdloop
+    line = input(self.prompt)
+  File "E:\software\anaconda\envs\baseInterpreter\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[2023-11-17 11:02:47.451 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:02:47.451 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190167.4519603
+[2023-11-17 11:03:28.097 INF][detection grpc-server <ThreadPoolExecutor-0_1>] gRPC@detect receive request
+[2023-11-17 11:03:28.097 INF][detection grpc-server <ThreadPoolExecutor-0_1>] (detect) request time: 1700190208.097838
+[2023-11-17 11:03:38.855 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.119.1:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:03:52.260 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.119.1:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:04:16.828 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:04:26.226 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 11:04:39.444 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:04:39.444 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190279.444219
+[2023-11-17 11:04:39.542 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.0985865592956543s
+[2023-11-17 11:04:39.542 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-17 11:04:39.543 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:04:39.543 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700190279.543769
+[2023-11-17 11:04:39.640 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09639096260070801s
+[2023-11-17 11:04:39.640 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-17 11:06:00.608 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 11:06:37.670 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:06:56.100 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address  172.24.96.1:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:11:37.139 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address  172.24.96.1:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-17 11:18:58.195 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 11:20:58.113 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:20:58.113 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700191258.1134634
+[2023-11-17 11:20:58.205 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09194159507751465s
+[2023-11-17 11:20:58.205 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-17 11:20:58.207 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 11:20:58.207 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700191258.2074046
+[2023-11-17 11:20:58.294 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.08755159378051758s
+[2023-11-17 11:20:58.295 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-17 13:16:26.345 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-17 13:16:30.474 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 13:16:30.474 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700198190.4744954
+[2023-11-17 13:16:30.593 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.11937236785888672s
+[2023-11-17 13:16:30.593 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-17 13:16:30.595 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-17 13:16:30.595 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700198190.595868
+[2023-11-17 13:16:30.693 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09751558303833008s
+[2023-11-17 13:16:30.693 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0

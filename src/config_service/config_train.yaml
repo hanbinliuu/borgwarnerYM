@@ -1,0 +1,12 @@
+ip: "192.168.6.152"
+port: 50050
+
+dataset:
+  name: test
+  path: C:/Users/lhb/Desktop/bog
+  normal_dir: normal
+  abnormal_dir: abnormal
+  test_normal_dir: test_normal
+  test_abnormal_dir: test_abnormal
+
+

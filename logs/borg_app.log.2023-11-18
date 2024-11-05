@@ -1,0 +1,24 @@
+[2023-11-18 21:23:47.554 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 77, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 61, in main
+    with run_detection_server(args.host, args.port, args.model_path) as (server, port):
+  File "E:\software\anaconda\envs\baseInterpreter\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_detection.py", line 28, in run_detection_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\baseInterpreter\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.226:7777; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-11-18 21:24:19.062 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-11-18 21:24:26.420 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-18 21:24:26.420 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700313866.4208436
+[2023-11-18 21:24:26.517 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09664177894592285s
+[2023-11-18 21:24:26.517 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-11-18 21:24:26.520 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-11-18 21:24:26.520 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1700313866.5204117
+[2023-11-18 21:24:26.613 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09356403350830078s
+[2023-11-18 21:24:26.613 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0

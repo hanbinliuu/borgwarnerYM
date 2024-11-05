@@ -1,0 +1,57 @@
+[2023-12-18 08:55:22.803 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 08:55:31.700 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 08:55:31.741 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 08:55:31.742 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 08:55:31.743 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 08:55:31.743 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 08:56:12.804 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 08:56:12.896 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 08:56:13.549 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (338,) + inhomogeneous part.
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 35, in train
+    model_id, model_url, model, extra_param= self.train_ctrler(request.data_path, request.split_ratio)
+  File "D:\pycharmProject\borgwarner\src\core\train_controller2.py", line 55, in __call__
+    model = self.detect_defect.run()
+  File "D:\pycharmProject\borgwarner\src\algo_lib\svm_classification.py", line 70, in run
+    X = np.concatenate((abnormal_images, normal_images))
+  File "<__array_function__ internals>", line 200, in concatenate
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (338,) + inhomogeneous part.
+[2023-12-18 08:58:55.390 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 08:58:57.563 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 08:58:57.565 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 08:58:57.566 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 08:58:57.566 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 08:58:57.567 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 08:59:38.711 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 08:59:38.769 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 08:59:40.373 INF][train controller <ThreadPoolExecutor-0_0>] model id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 08:59:40.373 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 42.80856156349182s
+[2023-12-18 08:59:40.388 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 13:56:59.587 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 13:57:19.898 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 13:57:19.899 INF][train controller <ThreadPoolExecutor-0_0>] model trained in the results folder
+[2023-12-18 13:57:19.900 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 0.00099945068359375s
+[2023-12-18 13:57:19.900 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 13:57:19.902 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 40, in train
+    return svm_pb2.TrainResponse(status=True, message='train success', model_id=model_id, model_url=model_url)
+TypeError: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+[2023-12-18 14:03:38.454 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.152:50052; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:04:33.331 INF][__main__ <MainThread>] grpc Server is listening at port :50052

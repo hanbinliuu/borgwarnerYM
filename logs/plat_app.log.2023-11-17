@@ -1,0 +1,58 @@
+[2023-11-17 09:33:39.634 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-11-17 09:43:16.880 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-11-17 09:43:16.882 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: [WinError 3] 系统找不到指定的路径。: '/Users/hanbinliu/PycharmProjects/borgwarner/results/'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 35, in train
+    model_id, model_url, model, extra_param= self.train_ctrler(request.data_path, request.split_ratio)
+  File "D:\pycharmProject\borgwarner\src\core\train_controller2.py", line 37, in __call__
+    files = os.listdir('results/')
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: '/Users/hanbinliu/PycharmProjects/borgwarner/results/'
+[2023-11-17 09:44:56.183 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-11-17 09:45:03.464 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-11-17 09:45:03.465 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-11-17 09:45:03.466 INF][train controller <ThreadPoolExecutor-0_0>] /Users/hanbinliu/Desktop/bog not exists, create
+[2023-11-17 09:45:03.471 INF][train controller <ThreadPoolExecutor-0_0>] /Users/hanbinliu/Desktop/bog\normal not exists, create
+[2023-11-17 09:45:03.471 INF][train controller <ThreadPoolExecutor-0_0>] /Users/hanbinliu/Desktop/bog\abnormal not exists, create
+[2023-11-17 09:45:03.479 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 35, in train
+    model_id, model_url, model, extra_param= self.train_ctrler(request.data_path, request.split_ratio)
+  File "D:\pycharmProject\borgwarner\src\core\train_controller2.py", line 52, in __call__
+    self._preprocess()  # 预处理
+  File "D:\pycharmProject\borgwarner\src\core\train_controller2.py", line 101, in _preprocess
+    masked_image = image_process.process_image()
+  File "D:\pycharmProject\borgwarner\src\algo_lib\bog_preprocess.py", line 23, in process_image
+    self.image = crop_rect(self.image)
+  File "D:\pycharmProject\borgwarner\src\algo_lib\bog_preprocess.py", line 6, in crop_rect
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.8.1) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+[2023-11-17 10:08:16.678 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-11-17 10:08:25.602 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-11-17 10:08:25.604 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-11-17 10:08:25.604 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog exists, skip create
+[2023-11-17 10:08:25.604 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\normal exists, skip create
+[2023-11-17 10:08:25.604 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\abnormal exists, skip create
+[2023-11-17 10:09:01.861 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\test_normal not exists, create
+[2023-11-17 10:09:01.918 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\test_abnormal not exists, create
+[2023-11-17 10:09:05.039 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (338,) + inhomogeneous part.
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 35, in train
+    model_id, model_url, model, extra_param= self.train_ctrler(request.data_path, request.split_ratio)
+  File "D:\pycharmProject\borgwarner\src\core\train_controller2.py", line 56, in __call__
+    model = self.detect_defect.run()
+  File "D:\pycharmProject\borgwarner\src\algo_lib\svm_classification.py", line 84, in run
+    X = np.concatenate((abnormal_images, normal_images))
+  File "<__array_function__ internals>", line 200, in concatenate
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (338,) + inhomogeneous part.
+[2023-11-17 10:12:56.791 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-11-17 10:13:12.555 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-11-17 10:13:12.558 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-11-17 10:13:12.558 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog not exists, create
+[2023-11-17 10:13:12.558 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\normal not exists, create
+[2023-11-17 10:13:12.559 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\abnormal not exists, create
+[2023-11-17 10:13:54.568 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\test_normal not exists, create
+[2023-11-17 10:13:54.623 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/Administrator/Desktop/bog\test_abnormal not exists, create
+[2023-11-17 10:13:58.721 INF][train controller <ThreadPoolExecutor-0_0>] model id: 22cc2ef1-d577-403d-8106-4528ece2eabb
+[2023-11-17 10:13:58.722 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 46.16480827331543s
+[2023-11-17 10:13:58.722 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: 22cc2ef1-d577-403d-8106-4528ece2eabb

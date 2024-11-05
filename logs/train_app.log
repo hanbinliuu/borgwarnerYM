@@ -1,0 +1,80 @@
+[2023-12-18 14:05:58.277 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.254:50052; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:06:47.645 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.254:50056; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:07:05.598 INF][__main__ <MainThread>] grpc Server is listening at port :50050
+[2023-12-18 14:07:27.867 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 14:07:27.869 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 14:07:27.869 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog exists, skip create
+[2023-12-18 14:07:27.869 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal exists, skip create
+[2023-12-18 14:07:27.869 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal exists, skip create
+[2023-12-18 14:08:13.960 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 14:08:14.021 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 14:08:15.536 INF][train controller <ThreadPoolExecutor-0_0>] model id: 39378640-e812-4df5-a3ad-7b9957934a72
+[2023-12-18 14:08:15.536 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 47.66779184341431s
+[2023-12-18 14:08:15.536 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: 39378640-e812-4df5-a3ad-7b9957934a72
+[2023-12-18 14:09:15.521 INF][__main__ <MainThread>] grpc Server is listening at port :50050
+[2023-12-18 14:09:22.849 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 14:09:22.850 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 14:09:22.850 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 14:09:22.851 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 14:09:22.856 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 14:09:56.835 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 14:09:56.910 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 14:09:58.310 INF][train controller <ThreadPoolExecutor-0_0>] model id: be709429-bcf7-4d02-a4ae-c7b40e51f665
+[2023-12-18 14:09:58.310 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 35.46011209487915s
+[2023-12-18 14:09:58.310 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: be709429-bcf7-4d02-a4ae-c7b40e51f665
+[2023-12-18 15:15:13.958 INF][__main__ <MainThread>] grpc Server is listening at port :50050
+[2023-12-18 15:15:20.818 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 15:15:20.819 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 15:15:20.819 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 15:15:20.820 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 15:15:20.820 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 15:15:56.121 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 15:15:56.171 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 15:15:57.457 INF][train controller <ThreadPoolExecutor-0_0>] model id: 4b61d036-0a93-4e0f-8b4b-720db3f1d028
+[2023-12-18 15:15:57.458 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 36.6386342048645s
+[2023-12-18 15:15:57.458 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: 4b61d036-0a93-4e0f-8b4b-720db3f1d028
+[2023-12-18 15:24:58.787 INF][__main__ <MainThread>] grpc Server is listening at port :50050
+[2023-12-18 15:25:03.347 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 15:25:03.348 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 15:25:03.349 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 15:25:03.349 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 15:25:03.350 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 15:25:34.136 INF][__main__ <MainThread>] grpc Server is listening at port :50050
+[2023-12-18 15:25:35.990 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 15:25:35.991 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 15:25:35.991 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 15:25:35.992 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 15:25:35.992 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create
+[2023-12-18 15:26:12.235 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_normal not exists, create
+[2023-12-18 15:26:12.301 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\test_abnormal not exists, create
+[2023-12-18 15:26:14.024 INF][train controller <ThreadPoolExecutor-0_0>] model id: b468c57d-9c32-4fb4-9c3a-7b5b90554137
+[2023-12-18 15:26:14.027 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 38.03630256652832s
+[2023-12-18 15:26:14.027 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: b468c57d-9c32-4fb4-9c3a-7b5b90554137

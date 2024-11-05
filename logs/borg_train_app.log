@@ -1,0 +1,87 @@
+[2023-12-18 13:58:52.633 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 13:58:56.260 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 13:58:56.261 INF][train controller <ThreadPoolExecutor-0_0>] model trained in the results folder
+[2023-12-18 13:58:56.262 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 0.001001119613647461s
+[2023-12-18 13:58:56.262 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 13:58:56.263 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 40, in train
+    return svm_pb2.TrainResponse(status=True, message='train success', model_id=model_id, model_url=model_url)
+TypeError: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+[2023-12-18 13:59:09.907 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 13:59:40.876 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 13:59:44.198 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 13:59:44.200 INF][train controller <ThreadPoolExecutor-0_0>] model trained in the results folder
+[2023-12-18 13:59:44.201 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 0.0009996891021728516s
+[2023-12-18 13:59:44.201 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 13:59:44.202 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 40, in train
+    return svm_pb2.TrainResponse(status=True, message='train success', model_id=model_id, model_url=model_url)
+TypeError: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+[2023-12-18 14:00:54.742 INF][__main__ <MainThread>] grpc Server is listening at port :50052
+[2023-12-18 14:00:58.690 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 14:00:58.691 INF][train controller <ThreadPoolExecutor-0_0>] model trained in the results folder
+[2023-12-18 14:00:58.691 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) using 0.0s
+[2023-12-18 14:00:58.691 INF][training grpc-server <ThreadPoolExecutor-0_0>] (train) model_id: e50c8021-a445-48dd-9c32-e3c49f93a6dc
+[2023-12-18 14:00:58.693 ERR][training grpc-server <ThreadPoolExecutor-0_0>] (train) fail: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\src\grpc_service\grpc_server.py", line 40, in train
+    return svm_pb2.TrainResponse(status=True, message='train success', model_id=model_id, model_url=model_url)
+TypeError: Pipeline(steps=[('standardscaler', StandardScaler()),
+                ('svc', SVC(C=2, probability=T has type Pipeline, but expected one of: bytes, unicode
+[2023-12-18 14:01:45.961 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.152:50052; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:01:54.612 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.152:50052; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:02:08.435 ERR][__main__ <MainThread>] exception raised
+Traceback (most recent call last):
+  File "D:\pycharmProject\borgwarner\application_training.py", line 79, in <module>
+    main()
+  File "D:\pycharmProject\borgwarner\application_training.py", line 63, in main
+    with run_training_server(args.host, args.port, args.cfg_path) as (server, port):
+  File "E:\software\anaconda\envs\svm\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "D:\pycharmProject\borgwarner\application_training.py", line 28, in run_training_server
+    boundport = server.add_insecure_port(f"{host}:{port}")
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_server.py", line 961, in add_insecure_port
+    return _common.validate_port_binding_result(
+  File "E:\software\anaconda\envs\svm\lib\site-packages\grpc\_common.py", line 166, in validate_port_binding_result
+    raise RuntimeError(_ERROR_MESSAGE_PORT_BINDING_FAILED % address)
+RuntimeError: Failed to bind to address 192.168.6.152:50052; set GRPC_VERBOSITY=debug environment variable to see detailed error message.
+[2023-12-18 14:04:58.985 INF][training grpc-server <ThreadPoolExecutor-0_0>] gRPC@train receive request
+[2023-12-18 14:04:58.986 INF][train controller <ThreadPoolExecutor-0_0>] model not trained in the results folder
+[2023-12-18 14:04:58.986 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog not exists, create
+[2023-12-18 14:04:58.987 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\normal not exists, create
+[2023-12-18 14:04:58.987 INF][train controller <ThreadPoolExecutor-0_0>] C:/Users/lhb/Desktop/bog\abnormal not exists, create

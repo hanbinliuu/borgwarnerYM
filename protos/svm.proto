@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_package = "com.yimuzn.bogehuana_detection.device.grpc";
+
+service SVMTrainingServer {
+  // 训练
+  rpc train(TrainRequest) returns (TrainResponse);
+}
+
+service SVMDetectionServer {
+  // 瑕疵检测
+  rpc detect(DetectRequest) returns (DetectResponse);
+}
+
+
+// ---------------训练
+message TrainRequest {
+  string data_path = 1;
+  float split_ratio = 2; //训练集和测试集的比例,　一般情况为0.7
+}
+
+message TrainResponse {
+  //　执行状态
+  bool status = 1;
+  //　执行信息
+  string message = 2;
+  // 执行结果
+  // 模型(算子)id
+  string model_id = 3;
+  //　模型（算子）url
+  string model_url = 4;
+
+  //参数备用
+  string parameter = 5;
+}
+
+
+// ---------------检测
+message DetectRequest {
+  string image_url = 1; //2d相机图
+}
+
+
+message DetectResponse {
+  //　执行状态,　算法是否成功
+  bool status = 1;
+  //　执行信息
+  string message = 2; //原因
+  // 执行结果
+  int32 result = 3; //是否瑕疵 eg,[abnormal:0,normal:1]
+}

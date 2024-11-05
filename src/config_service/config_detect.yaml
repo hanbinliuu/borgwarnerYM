@@ -1,0 +1,11 @@
+ip: "192.168.6.152"
+port: 7777
+
+
+dataset:
+  name: test
+  path: /Users/hanbinliu/Desktop/bog
+  test_normal_dir: test_normal
+  test_abnormal_dir: test_abnormal
+
+
