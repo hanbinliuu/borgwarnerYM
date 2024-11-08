@@ -35,14 +35,14 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
 
     # train
-    filePath = r'D:\ym\borgwarner\borg_tg\tg_data_train\train'
-    ip = "192.168.6.152:50050"
-    run_train(filePath, ip)
+    # filePath = r'D:\ym\borgwarner\borg_tg\tg_data_train\train'
+    # ip = "192.168.6.152:50050"
+    # run_train(filePath, ip)
 
     # detection
-    ip = "192.168.6.152:7777"
+    ip = "192.168.1.76:7777"
     # ip = "0.0.0.0:7777"
-    folder_url = "D:/ym/borgwarner/borgtest/"
+    folder_url = "/Volumes/TU280Pro/ym/borgwarner/test_borg/normal/"
     files = os.listdir(folder_url)
     for file in files:
         image_url = folder_url + file

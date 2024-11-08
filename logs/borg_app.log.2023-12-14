@@ -1,0 +1,39 @@
+[2023-12-14 08:33:04.166 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-12-14 08:33:23.143 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:33:23.143 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514003.143686
+[2023-12-14 08:33:23.265 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.1217806339263916s
+[2023-12-14 08:33:23.266 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 1
+[2023-12-14 08:33:23.267 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:33:23.267 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514003.2674658
+[2023-12-14 08:33:23.373 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.10446453094482422s
+[2023-12-14 08:33:23.373 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-12-14 08:33:23.375 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:33:23.375 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514003.3759327
+[2023-12-14 08:33:23.485 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.10954880714416504s
+[2023-12-14 08:33:23.485 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-12-14 08:35:15.653 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-12-14 08:35:18.881 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:35:18.881 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514118.8818448
+[2023-12-14 08:35:19.008 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.1262829303741455s
+[2023-12-14 08:35:19.008 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 1
+[2023-12-14 08:35:19.010 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:35:19.010 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514119.0101206
+[2023-12-14 08:35:19.106 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09514379501342773s
+[2023-12-14 08:35:19.106 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-12-14 08:35:19.108 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:35:19.108 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514119.1083007
+[2023-12-14 08:35:19.200 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.09259152412414551s
+[2023-12-14 08:35:19.200 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-12-14 08:37:21.283 INF][__main__ <MainThread>] grpc Server is listening at port :7777
+[2023-12-14 08:37:25.102 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:37:25.102 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514245.1028843
+[2023-12-14 08:37:25.217 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.11482882499694824s
+[2023-12-14 08:37:25.217 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 1
+[2023-12-14 08:37:25.220 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:37:25.220 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514245.220713
+[2023-12-14 08:37:25.329 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.10876703262329102s
+[2023-12-14 08:37:25.329 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
+[2023-12-14 08:37:25.331 INF][detection grpc-server <ThreadPoolExecutor-0_0>] gRPC@detect receive request
+[2023-12-14 08:37:25.331 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) request time: 1702514245.3316302
+[2023-12-14 08:37:25.453 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) using 0.12225723266601562s
+[2023-12-14 08:37:25.453 INF][detection grpc-server <ThreadPoolExecutor-0_0>] (detect) result: 0
